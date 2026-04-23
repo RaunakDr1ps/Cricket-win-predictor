@@ -50,7 +50,7 @@ current_score = st.number_input("Current Score", min_value=0, step=1)
 target = st.number_input("Target", min_value=1, step=1)
 balls_left = st.number_input("Balls Left", min_value=1, max_value=120, step=1)
 wickets_left = st.number_input("Wickets Left", min_value=0, max_value=10, step=1)
-
+model, feature_columns = load_model()
 if st.button("Predict Win Probability"):
 
     if batting_team == bowling_team:
