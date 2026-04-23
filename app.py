@@ -13,9 +13,10 @@ import pandas as pd
 import pickle
 
 # Load saved model and feature columns
-model = pickle.load(open("model.pkl", "rb"))
-feature_columns = pickle.load(open("feature_columns.pkl", "rb"))
-
+def load_model():
+    model = pickle.load(open("model.pkl", "rb"))
+    feature_columns = pickle.load(open("feature_columns.pkl", "rb"))
+    return model, feature_columns
 teams = [
     'Chennai Super Kings',
     'Mumbai Indians',
