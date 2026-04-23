@@ -11,7 +11,7 @@ teams = [
 st.set_page_config(page_title="IPL Win Predictor", page_icon="🏏")
 
 st.title("🏏 IPL Win Predictor")
-st.write("Estimate batting team's win probability during a chase.")
+st.write("Estimate batting team's win probability during a chase.(don't use 1xbet and stake)")
 
 batting_team = st.selectbox("Batting Team", teams)
 bowling_team = st.selectbox("Bowling Team", teams)
