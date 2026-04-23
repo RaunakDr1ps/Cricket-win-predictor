@@ -1,13 +1,3 @@
-import subprocess
-import sys
-
-# force install sklearn if missing
-try:
-    import sklearn
-except ModuleNotFoundError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn==1.4.2"])
-    import sklearn
-
 import streamlit as st
 import pandas as pd
 import pickle
