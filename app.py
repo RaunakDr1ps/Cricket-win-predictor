@@ -94,10 +94,47 @@ def win_probability(current_score, target, balls_left, wickets_left):
     current_rr = (current_score / balls_bowled) * 6 if balls_bowled > 0 else 0
     required_rr = (runs_left / balls_left) * 6 if balls_left > 0 else 0
 
-    pressure = required_rr - current_rr
-    score = 1.2 - (0.55 * pressure) + (0.22 * (wickets_left - 5)) + (0.008 * (balls_left - 60))
-    prob = 1 / (1 + math.exp(-score))
-    return max(0, min(1, prob)), current_rr, required_rr, runs_left
+    if runs_left <= 0:
+        return 1.0, current_rr, required_rr, runs_left
+
+    if wickets_left <= 0:
+        return 0.0, current_rr, required_rr, runs_left
+
+    rr_gap = required_rr - current_rr
+
+    wicket_factor = wickets_left / 10
+    ball_factor = balls_left / 120
+
+    pressure = 0
+
+    if required_rr > 8:
+        pressure += (required_rr - 8) * 0.12
+
+    if required_rr > 12:
+        pressure += (required_rr - 12) * 0.18
+
+    if balls_left <= 30:
+        pressure += 0.35
+
+    if balls_left <= 12:
+        pressure += 0.55
+
+    if wickets_left <= 5:
+        pressure += 0.25
+
+    if wickets_left <= 3:
+        pressure += 0.45
+
+    base = 0.55
+    score = base
+    score += wicket_factor * 0.35
+    score += ball_factor * 0.20
+    score -= rr_gap * 0.08
+    score -= pressure
+
+    prob = 1 / (1 + math.exp(-4 * (score - 0.5)))
+
+    return max(0.01, min(0.99, prob)), current_rr, required_rr, runs_left
 
 st.markdown("""
 <h1 style='text-align:center; font-size:52px;'>🏏 T20 Win Probability Engine</h1>
