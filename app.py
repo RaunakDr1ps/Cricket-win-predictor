@@ -4,8 +4,6 @@ import pandas as pd
 
 st.set_page_config(page_title="T20 Win Probability", page_icon="🏏", layout="centered")
 
-st.markdown("<hr>", unsafe_allow_html=True)
-
 st.markdown("""
 <style>
 .stApp {
@@ -150,6 +148,8 @@ st.markdown("""
 Real-time match pressure estimator • Built for cricket chase scenarios • Don't Bet
 </p>
 """, unsafe_allow_html=True)
+
+st.markdown("<hr>", unsafe_allow_html=True)
 
 batting_team = st.selectbox("Batting Team", teams)
 bowling_team = st.selectbox("Bowling Team", teams)
