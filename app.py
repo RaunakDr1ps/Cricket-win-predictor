@@ -35,7 +35,7 @@ teams = [
 st.set_page_config(page_title="IPL Win Predictor", page_icon="🏏")
 
 st.image(
-    "https://www.google.com/imgres?q=ipl%20banner&imgurl=https%3A%2F%2Fapiexcellent.com%2Fstorage%2Fimages%2Fmedias%2Fsportsmarketing%2Fpricing%2Fipl2024-main-20240423121238-20241216131438.jpg&imgrefurl=https%3A%2F%2Fwww.excellentpublicity.com%2Fsportsmarketing%2Findian-premier-league&docid=wJMwbaaHLNx7pM&tbnid=IDJX4zFl13OQxM&vet=12ahUKEwiK092Eu4WUAxXN9DgGHfmvAckQnPAOegQIGxAB..i&w=1200&h=630&hcb=2&ved=2ahUKEwiK092Eu4WUAxXN9DgGHfmvAckQnPAOegQIGxABhttps://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_60/lsci/db/PICTURES/CMS/348000/348000.jpg",
+    "https://www.google.com/imgres?q=ipl%20banner&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D10158265582533634&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FIPL%2Fphotos%2Fd41d8cd9%2F10158265582533634%2F&docid=mn2FZBdQ4fbovM&tbnid=PCdswMYufwLoyM&vet=12ahUKEwiK092Eu4WUAxXN9DgGHfmvAckQnPAOegQIJxAB..i&w=820&h=312&hcb=2&ved=2ahUKEwiK092Eu4WUAxXN9DgGHfmvAckQnPAOegQIJxAB",
     use_container_width=True
 )
 
