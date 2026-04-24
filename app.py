@@ -172,6 +172,9 @@ with col2:
 
 st.markdown("### Match Inputs")
 
+# 👇 ADD THIS LINE EXACTLY HERE
+st.caption("Adjust values to simulate live match scenarios")
+
 current_score = st.number_input("Current Score", min_value=0, step=1)
 target = st.number_input("Target", min_value=1, step=1)
 balls_left = st.number_input("Balls Left", min_value=1, max_value=120, step=1)
