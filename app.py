@@ -119,6 +119,12 @@ def win_probability(current_score, target, balls_left, wickets_left):
     if balls_left <= 12:
         pressure += 0.55
 
+    if balls_left > 60:
+    prob = min(prob, 0.85)
+
+    if balls_left > 30:
+    prob = min(prob, 0.92)
+    
     if wickets_left <= 5:
         pressure += 0.25
 
