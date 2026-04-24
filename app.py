@@ -204,13 +204,24 @@ if st.button("Predict Win Probability"):
 
         st.markdown("### Win Probability Momentum Graph 📈")
 
-        graph_data = []
-        for b in range(max(1, balls_left - 30), min(120, balls_left + 31)):
-            temp_prob, _, _, _ = win_probability(current_score, target, b, wickets_left)
-            graph_data.append({
-                "Balls Left": b,
-                f"{batting_team} Win %": temp_prob * 100
-            })
+graph_data = []
+
+temp_score = current_score
+
+for b in range(balls_left, 0, -3):
+    temp_runs = max(0, temp_score - ((balls_left - b) * current_rr / 6))
+    
+    temp_prob, _, _, _ = win_probability(
+        int(temp_runs),
+        target,
+        b,
+        wickets_left
+    )
+    
+    graph_data.append({
+        "Balls Left": b,
+        f"{batting_team} Win %": temp_prob * 100
+    })
 
         chart_df = pd.DataFrame(graph_data).set_index("Balls Left")
         st.line_chart(chart_df)
