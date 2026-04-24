@@ -11,6 +11,18 @@ st.markdown("""
     background-attachment: fixed;
 }
 </style>
+""", unsafe_allow_html=True
+
+            st.markdown("""
+<style>
+div.stButton > button {
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 18px;
+}
+</style>
 """, unsafe_allow_html=True)
 
 teams = [
