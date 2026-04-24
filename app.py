@@ -11,7 +11,7 @@ st.markdown("""
     background-attachment: fixed;
 }
 </style>
-""", unsafe_allow_html=True
+""", unsafe_allow_html=True)
 
             st.markdown("""
 <style>
