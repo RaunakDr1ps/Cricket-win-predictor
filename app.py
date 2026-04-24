@@ -64,17 +64,17 @@ teams = [
     "Lucknow Super Giants"
 ]
 
-team_badges = {
-    "Chennai Super Kings": "CSK",
-    "Mumbai Indians": "MI",
-    "Royal Challengers Bangalore": "RCB",
-    "Kolkata Knight Riders": "KKR",
-    "Delhi Capitals": "DC",
-    "Punjab Kings": "PBKS",
-    "Rajasthan Royals": "RR",
-    "Sunrisers Hyderabad": "SRH",
-    "Gujarat Titans": "GT",
-    "Lucknow Super Giants": "LSG"
+team_logos = {
+    "Chennai Super Kings": "https://upload.wikimedia.org/wikipedia/en/2/2e/Chennai_Super_Kings_Logo.svg",
+    "Mumbai Indians": "https://upload.wikimedia.org/wikipedia/en/5/5c/Mumbai_Indians_Logo.svg",
+    "Royal Challengers Bangalore": "https://upload.wikimedia.org/wikipedia/en/4/4f/Royal_Challengers_Bangalore_Logo.svg",
+    "Kolkata Knight Riders": "https://upload.wikimedia.org/wikipedia/en/4/4c/Kolkata_Knight_Riders_Logo.svg",
+    "Delhi Capitals": "https://upload.wikimedia.org/wikipedia/en/2/2f/Delhi_Capitals.svg",
+    "Punjab Kings": "https://upload.wikimedia.org/wikipedia/en/d/d4/Punjab_Kings_Logo.svg",
+    "Rajasthan Royals": "https://upload.wikimedia.org/wikipedia/en/6/60/Rajasthan_Royals_Logo.svg",
+    "Sunrisers Hyderabad": "https://upload.wikimedia.org/wikipedia/en/8/81/Sunrisers_Hyderabad.svg",
+    "Gujarat Titans": "https://upload.wikimedia.org/wikipedia/en/0/09/Gujarat_Titans_Logo.svg",
+    "Lucknow Super Giants": "https://upload.wikimedia.org/wikipedia/en/2/23/Lucknow_Super_Giants_IPL_Logo.svg"
 }
 
 def win_probability(current_score, target, balls_left, wickets_left):
@@ -102,20 +102,20 @@ bowling_team = st.selectbox("Bowling Team", teams)
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown(f"""
-    <div class="logo-card">
-        <div class="team-logo">{team_badges[batting_team]}</div>
-        <p>Batting Team</p>
-    </div>
-    """, unsafe_allow_html=True)
+   st.markdown(f"""
+<div class="logo-card">
+    <img src="{team_logos[batting_team]}" width="80">
+    <p>Batting Team</p>
+</div>
+""", unsafe_allow_html=True)
 
 with col2:
     st.markdown(f"""
-    <div class="logo-card">
-        <div class="team-logo">{team_badges[bowling_team]}</div>
-        <p>Bowling Team</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="logo-card">
+    <img src="{team_logos[bowling_team]}" width="80">
+    <p>Bowling Team</p>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("### Match Inputs")
 
