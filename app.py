@@ -44,6 +44,8 @@ st.markdown("""
 <p style='text-align: center; color: gray;'>Real-time match situation intelligence</p>
 """, unsafe_allow_html=True)
 
+st.markdown("### Match Inputs")
+
 batting_team = st.selectbox("Batting Team", teams)
 bowling_team = st.selectbox("Bowling Team", teams)
 
