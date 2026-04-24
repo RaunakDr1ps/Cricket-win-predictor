@@ -192,6 +192,16 @@ if st.button("Predict Win Probability"):
         batting_prob = round(prob * 100, 2)
         bowling_prob = round((1 - prob) * 100, 2)
 
+        # 👇 ADD HERE
+if prob > 0.75:
+    st.success("Batting team is in strong control 🟢")
+elif prob > 0.55:
+    st.info("Slight advantage to batting side 🟡")
+elif prob > 0.4:
+    st.warning("Match is balanced ⚖️")
+else:
+    st.error("Bowling side dominating 🔴")
+
         st.markdown(f"""
         <div class="result-box">
             <h2>{batting_team}: {batting_prob}%</h2>
