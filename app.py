@@ -34,6 +34,11 @@ teams = [
 
 st.set_page_config(page_title="IPL Win Predictor", page_icon="🏏")
 
+st.image(
+    "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_60/lsci/db/PICTURES/CMS/348000/348000.jpg",
+    use_container_width=True
+)
+
 st.markdown("""
 <h1 style='text-align: center; font-size: 48px;'>🏏 IPL Win Predictor</h1>
 <p style='text-align: center; color: gray;'>Real-time match situation intelligence</p>
