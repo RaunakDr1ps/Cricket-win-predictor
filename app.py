@@ -4,6 +4,8 @@ import pandas as pd
 
 st.set_page_config(page_title="T20 Win Probability", page_icon="🏏", layout="centered")
 
+st.markdown("<hr>", unsafe_allow_html=True)
+
 st.markdown("""
 <style>
 .stApp {
