@@ -202,8 +202,7 @@ if st.button("Predict Win Probability"):
         st.write(f"Current Run Rate: {round(current_rr, 2)}")
         st.write(f"Required Run Rate: {round(required_rr, 2)}")
 
-             st.markdown("### Win Probability Momentum Graph 📈")
-
+        st.markdown("### Win Probability Momentum Graph 📈")
         graph_data = []
 
         for b in range(balls_left, 0, -3):
