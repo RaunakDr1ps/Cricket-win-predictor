@@ -5,7 +5,7 @@ st.markdown("""
 <style>
 .stApp {
     background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-    url("https://images.unsplash.com/photo-1593349480506-8433634cdcbe");
+    url("https://www.sportsboom.com/_next/image?url=https%3A%2F%2Fassets.sportsboom.com%2FRohit_Sharma_with_Mumbai_Indians_IPL_Trophy_1_6763d98c6f.jpeg&w=828&q=75");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
