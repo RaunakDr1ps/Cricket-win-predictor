@@ -77,7 +77,7 @@ teams = [
 team_badges = {
     "Chennai Super Kings": "CSK",
     "Mumbai Indians": "MI",
-    "Royal Challengers Bangalore": "(•́⍜•̀)",
+    "Royal Challengers Bangalore": "(︶︿︶)_╭∩╮",
     "Kolkata Knight Riders": "KKR",
     "Delhi Capitals": "DC",
     "Punjab Kings": "PBKS",
