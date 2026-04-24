@@ -134,7 +134,7 @@ def win_probability(current_score, target, balls_left, wickets_left):
 
     x = -4 * (score - 0.5)
     x = max(-50, min(50, x))
-        prob = 1 / (1 + math.exp(x))
+    prob = 1 / (1 + math.exp(x))
 
     if balls_left > 60:
         prob = min(prob, 0.85)
