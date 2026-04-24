@@ -28,8 +28,18 @@ st.markdown("""
 }
 
 .team-logo {
-    font-size: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4b4b, #ff944d);
+    color: white;
+    font-size: 26px;
     font-weight: 900;
+    margin-bottom: 10px;
+    box-shadow: 0 0 25px rgba(255, 75, 75, 0.35);
 }
 
 @keyframes float {
